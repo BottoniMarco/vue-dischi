@@ -11,9 +11,10 @@
   </head>
   <body>
     <div id="root">
-      <div id="wrapper">
+      <div id="wrapper" >
         <div class="album" v-for="album in albums" v-if="album.genre == selected || selected=='All'" >
-          <img :src="album.poster" alt="">
+          <img :src="album.poster" alt=""
+          >
           <h3 >{{ album.title }}</h3>
           <div class="low-specs">
             <p>{{ album.author }}</p>
@@ -27,6 +28,7 @@
           {{ category }}
         </option>
       </select>
+      <button type="button" name="button" @click="sortYear('year')">Ordina per anno</button>
     </div>
 
     <script src="js/script.js" charset="utf-8"></script>

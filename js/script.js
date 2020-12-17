@@ -21,11 +21,11 @@ var root = new Vue({
           this.genres.push(item.genre);
         }
         console.log(this.genres);
-
       });
-
-      console.log(this.selected);
     },
+    sortYear: function (year) {
+      this.albums.sort((a,b) => a[year] < b[year] ? -1:1);
+    }
   },
   created: function (){
     const self = this;
