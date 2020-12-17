@@ -6,12 +6,15 @@ body {
 }
 
 #root {
+  height: 100vh;
+  margin: 10px;
+}
+
+#wrapper{
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  height: 100vh;
-  margin: 10px;
 }
 
 .album {

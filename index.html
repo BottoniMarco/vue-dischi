@@ -11,8 +11,8 @@
   </head>
   <body>
     <div id="root">
-      <div id="wrapper" v-for="album in albums">
-        <div class="album" v-if="album.genre == selected" >
+      <div id="wrapper">
+        <div class="album" v-for="album in albums" v-if="album.genre == selected || selected=='All'" >
           <img :src="album.poster" alt="">
           <h3 >{{ album.title }}</h3>
           <div class="low-specs">
@@ -21,12 +21,11 @@
           </div>
         </div>
       </div>
-      <select class="genres" name="" v-model="selected" @click="albumGenre">
-        <option>scegli genere</option>
-        <option value="Rock">Rock</option>
-        <option value="Pop">Pop</option>
-        <option value="Jazz">Jazz</option>
-        <option value="Metal">Metal</option>
+      <select class="genres" name="" v-model="selected"  @click="albumGenre">
+        <option value="All">Tutti</option>
+        <option v-for="category in genres" :value="category">
+          {{ category }}
+        </option>
       </select>
     </div>
 
