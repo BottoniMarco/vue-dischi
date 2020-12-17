@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.js" integrity="sha512-bYkaBWaFtfPIMYt9+CX/4DWgfrjcHinjerNYxQmQx1VM76eUsPPKZa5zWV8KksVkBF/DaHSADCwil2J5Uq2ctA==" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <title></title>
+  </head>
+  <body>
+    <div id="root">
+      <div class="album" v-for="album in albums">
+        <img :src="album.poster" alt="">
+        <h3>{{ album.title }}</h3>
+        <div class="low-specs">
+          <p>{{ album.author }}</p>
+          <p>{{ album.year }}</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="js-test.js" charset="utf-8"></script>
+
+  </body>
+</html>

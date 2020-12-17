@@ -1,0 +1,38 @@
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+#root {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100vh;
+  margin: 10px;
+}
+
+.album {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  text-align: center;
+  width: 150px;
+  height: 250px;
+  background: red;
+  margin: 10px;
+  padding: 10px;
+}
+
+.album img {
+  width: 80%;
+}
+
+.low-specs {
+  position: absolute;
+  bottom: 0;
+}
