@@ -10,10 +10,14 @@
 var root = new Vue({
   el: "#root",
   data: {
-    albums:[]
+    albums:[],
+    selected:"",
   },
-  method: {
-
+  methods: {
+    albumGenre : function () {
+      console.log(this.selected);
+      
+    },
   },
   created: function (){
     axios.get('https://flynn.boolean.careers/exercises/api/array/music')
@@ -21,6 +25,7 @@ var root = new Vue({
         let albumSpecs = result.data.response;
         root.albums = albumSpecs;
         console.log(root.albums);
+
       });
   }
 })

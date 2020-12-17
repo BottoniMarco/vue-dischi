@@ -11,14 +11,23 @@
   </head>
   <body>
     <div id="root">
-      <div class="album" v-for="album in albums">
-        <img :src="album.poster" alt="">
-        <h3>{{ album.title }}</h3>
-        <div class="low-specs">
-          <p>{{ album.author }}</p>
-          <p>{{ album.year }}</p>
+      <div id="wrapper" v-for="album in albums">
+        <div class="album" v-if="album.genre == selected" >
+          <img :src="album.poster" alt="">
+          <h3 >{{ album.title }}</h3>
+          <div class="low-specs">
+            <p>{{ album.author }}</p>
+            <p>{{ album.year }}</p>
+          </div>
         </div>
       </div>
+      <select class="genres" name="" v-model="selected" @click="albumGenre">
+        <option>scegli genere</option>
+        <option value="Rock">Rock</option>
+        <option value="Pop">Pop</option>
+        <option value="Jazz">Jazz</option>
+        <option value="Metal">Metal</option>
+      </select>
     </div>
 
     <script src="js/script.js" charset="utf-8"></script>
